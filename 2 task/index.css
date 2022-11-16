@@ -1,0 +1,301 @@
+:root {
+    --gradien-text: linear-gradient(90deg, #FCB045, #FF3F78)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    color: #E4E5EA;
+    font-size: 18px;
+}
+
+body {
+    background: #0E1014;
+}
+
+/*  GLOBAL CLASSES  */
+
+.text-gradient {
+    background-color: #fff;
+    background-image: var(--gradien-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.little-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #656566;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.gradient {
+    font-weight: 900;
+    font-size: 52px;
+}
+
+/*  HEADER  */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 57px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.header .logo .logo-subtitle {
+    position: absolute;
+    left: 0;
+    top: 45px;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.header .navbar ul {
+    display: flex;
+    gap: 30px;
+}
+
+.header .navbar ul li {
+    list-style: none;
+}
+
+.header .navbar ul li a {
+    display: block;
+    text-decoration: none;
+}
+
+.header .left {
+    display: flex;
+    align-items: center;
+}
+
+.header .left .logo {
+    margin-right: 52px;
+}
+
+.header .right {
+    display: flex;
+}
+
+.header .right .phone-number {
+    margin-right: 48px;
+}
+
+.header .right .social {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+}
+
+/*  CONTENT  */
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 130px;
+}
+
+.content .present-title {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.content .present-title .grd-title {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.content .description {
+    margin-top: 30px;
+    font-weight: 400;
+    line-height: 22px;
+}
+.content .consultations {
+    text-align: right;
+}
+.content .consultations .consultations-title {
+    line-height: 22px;
+}
+.content .consultations .consultations-title span {
+    text-transform: uppercase;
+}
+.content .gifts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    column-gap: 36px;
+    margin-top: 40px;
+    margin-bottom: 61px;
+}
+
+.content .gift .gift-title {
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.content .gift .gift-description {
+    max-width: 150px;
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+.content .btn {
+    padding: 21px 35px;
+    background: #4077F3;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+
+/*  FOOTER  */
+
+.footer {
+    margin-top: 124px;
+}
+.footer-sections {
+    display: flex;
+    justify-content: space-between;
+}
+@media (min-height: 980px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+    }
+    .footer {
+        position: inherit;
+        bottom: 0;
+    }
+}
+.footer .links {
+    margin-top: 20px;
+}
+.footer .links .link{
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer .links.double {
+    display: flex;
+    gap: 52px;
+}
+
+.footer .contact-title {
+    text-align: right;
+}
+
+.footer .contacts {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.footer .contacts .social {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 13px;
+    margin-top: 24px;
+    margin-bottom: 22px;
+}
+
+/*  COPYRIGHT  */
+.copyright {
+    text-align: right;
+    margin-top: 33px;
+    margin-bottom: 20px;
+}
+.copyright .text, .copyright .link-politics {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+/*  BACKGROUND CIRCLES  */
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.circle1 {
+    width: 311px;
+    height: 311px;
+    left: -102px;
+    top: 251px;
+    background: #961A1A;
+    opacity: 0.5;
+    filter: blur(196px);
+}
+
+.circle2 {
+    width: 259px;
+    height: 259px;
+    left: 602px;
+    top: -154px;
+    background: #833AB4;
+    opacity: 0.5;
+    filter: blur(196px);
+}
+
+.circle3 {
+    width: 83px;
+    height: 83px;
+    left: 519px;
+    top: 83px;
+    background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.536) 0%, rgba(212, 93, 93, 0.264) 59.67%, rgba(167, 49, 49, 0.248) 78.59%, rgba(130, 25, 25, 0.248) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+    backdrop-filter: blur(2px);
+}
+
+.circle4 {
+    width: 60px;
+    height: 60px;
+    left: 868px;
+    top: -2px;
+    background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(236, 208, 255, 0.64) 0%, rgba(161, 93, 207, 0.24) 59.67%, rgba(118, 49, 164, 0.208) 78.59%, rgba(86, 24, 128, 0.232) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 3px 6px 27px -10px rgba(177, 118, 217, 0.25);
+    filter: blur(5px);
+    backdrop-filter: blur(2px);
+}
+
+.circle5 {
+    width: 28px;
+    height: 28px;
+    left: 851px;
+    top: 547px;
+    background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.48) 0%, rgba(212, 93, 93, 0.248) 59.67%, rgba(167, 49, 49, 0.264) 78.59%, rgba(130, 25, 25, 0.232) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+    filter: blur(2.5px);
+    backdrop-filter: blur(2px);
+}
