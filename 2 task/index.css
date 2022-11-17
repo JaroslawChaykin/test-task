@@ -1,5 +1,11 @@
 :root {
-    --gradien-text: linear-gradient(90deg, #FCB045, #FF3F78)
+    --gradien-text: linear-gradient(90deg, #FCB045, #FF3F78);
+    --big-text: 48px;
+    --medium-text: 18px;
+    --regular-text: 16px;
+    --small-text: 14px;
+    --subtitle-text: 12px;
+    --very-small-text: 10px;
 }
 
 * {
@@ -9,7 +15,7 @@
     font-family: 'Inter', sans-serif;
     line-height: 1;
     color: #E4E5EA;
-    font-size: 18px;
+    font-size: var(--medium-text);
 }
 
 body {
@@ -28,7 +34,7 @@ body {
 .little-title {
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: var(--small-text);
     line-height: 17px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -40,11 +46,6 @@ body {
     padding: 0 15px;
     margin: 0 auto;
     width: 100%;
-}
-
-.gradient {
-    font-weight: 900;
-    font-size: 52px;
 }
 
 /*  HEADER  */
@@ -69,7 +70,7 @@ body {
     left: 0;
     top: 45px;
     font-weight: 300;
-    font-size: 10px;
+    font-size: var(--very-small-text);
     line-height: 12px;
 }
 
@@ -121,12 +122,12 @@ body {
 
 .content .present-title {
     font-weight: 400;
-    font-size: 48px;
+    font-size: var(--big-text);
     line-height: 58px;
 }
 
 .content .present-title .grd-title {
-    font-size: 48px;
+    font-size: var(--big-text);
     font-weight: 900;
 }
 
@@ -135,15 +136,20 @@ body {
     font-weight: 400;
     line-height: 22px;
 }
+
 .content .consultations {
     text-align: right;
 }
+
 .content .consultations .consultations-title {
     line-height: 22px;
+    font-family: 'Montserrat', sans-serif;
 }
+
 .content .consultations .consultations-title span {
     text-transform: uppercase;
 }
+
 .content .gifts {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -151,26 +157,38 @@ body {
     column-gap: 36px;
     margin-top: 40px;
     margin-bottom: 61px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content .gifts-mobile {
+    display: none;
+}
+
+.content .gift {
+    width: 150px;
 }
 
 .content .gift .gift-title {
-    font-weight: 500;
+    font-weight: 400;
     line-height: 22px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
 }
+
 .content .gift .gift-description {
     max-width: 150px;
     margin-top: 6px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: var(--regular-text);
     line-height: 20px;
 }
+
 .content .btn {
     padding: 21px 35px;
     background: #4077F3;
     font-weight: 500;
-    font-size: 16px;
+    font-size: var(--regular-text);
     line-height: 19px;
     text-align: center;
 }
@@ -181,28 +199,19 @@ body {
 .footer {
     margin-top: 124px;
 }
+
 .footer-sections {
     display: flex;
     justify-content: space-between;
 }
-@media (min-height: 980px) {
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100vh;
-    }
-    .footer {
-        position: inherit;
-        bottom: 0;
-    }
-}
+
 .footer .links {
     margin-top: 20px;
 }
-.footer .links .link{
+
+.footer .links .link {
     font-weight: 400;
-    font-size: 16px;
+    font-size: var(--regular-text);
     margin-bottom: 10px;
 }
 
@@ -234,9 +243,10 @@ body {
     margin-top: 33px;
     margin-bottom: 20px;
 }
+
 .copyright .text, .copyright .link-politics {
     font-weight: 400;
-    font-size: 12px;
+    font-size: var(--subtitle-text);
     line-height: 15px;
 }
 
@@ -298,4 +308,191 @@ body {
     box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
     filter: blur(2.5px);
     backdrop-filter: blur(2px);
+}
+
+/*  MEDIA WHERE HEIGHT > 980px  */
+
+@media (min-height: 980px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+    }
+
+    .footer {
+        position: inherit;
+        bottom: 0;
+    }
+}
+
+/*  MEDIA WHERE WEIGHT < 320px  */
+
+@media (max-width: 320px) {
+    :root {
+        --big-text: 36px;
+    }
+
+    .container {
+        max-width: 320px;
+    }
+
+    .header {
+        background: #0E1014;
+        height: 55px;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 0;
+    }
+
+    .header .logo {
+        display: none;
+    }
+
+    .header .phone-number {
+        display: none;
+    }
+
+    .header .right .social {
+        display: none;
+    }
+
+    .header .navbar ul {
+        justify-content: space-between;
+    }
+
+    .header .navbar ul li:last-child {
+        display: none;
+    }
+
+    .header .navbar ul li a {
+        font-size: 12px;
+    }
+
+    .content {
+        flex-direction: column;
+        padding-top: 40px;
+        margin-top: 0;
+        background-image: url("./images/noise.svg");
+        position: relative;
+    }
+
+    .bg-glass {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: radial-gradient(238.53% 189.02% at 3.2% 3.49%, rgba(255, 246, 233, 0.1) 0%, rgba(26, 29, 35, 0.1) 26.62%, rgba(26, 29, 35, 0.1) 52.1%, rgba(26, 29, 35, 0.01) 70.17%, rgba(26, 29, 35, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+        backdrop-filter: blur(7.5px);
+        z-index: -1;
+    }
+
+    .content .present .description {
+        margin-top: 15px;
+    }
+
+    .content .present .present-title {
+        line-height: 44px;
+    }
+
+    .content .consultations {
+        margin-top: 45px;
+        text-align: left;
+    }
+
+    .content .consultations .gifts .gift .gift-title {
+        font-size: 13px;
+    }
+
+    .content .consultations .gifts .gift .gift-description {
+        display: none;
+    }
+
+    .content .gifts {
+        display: none;
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+
+    .content .gifts-mobile {
+        display: grid;
+        column-gap: 0;
+        row-gap: 14px;
+    }
+
+    .content .gifts-mobile .gift-title {
+        font-weight: 400;
+    }
+
+    .content .consultations .btn {
+        display: none;
+    }
+
+    .footer {
+        background: #0E1014;
+        margin-top: 0;
+    }
+
+    .footer .footer-sections {
+        flex-direction: column;
+    }
+
+    .footer .footer-sections .footer-section:first-child {
+        margin-top: 40px;
+    }
+
+    .footer .footer-sections .footer-section:last-child * {
+        text-align: left;
+    }
+
+    .footer .footer-sections .social {
+        justify-content: flex-start;
+    }
+
+    .footer .footer-sections {
+        row-gap: 30px;
+    }
+
+    .footer .copyright {
+        text-align: left;
+    }
+
+    .circle1 {
+        width: 211px;
+        height: 210px;
+        left: -55px;
+        top: 241px;
+    }
+
+    .circle2 {
+        left: 258px;
+        top: 107px;
+    }
+
+    .circle3 {
+        width: 43px;
+        height: 43px;
+        left: 29px;
+        top: 477px;
+        filter: blur(8px);
+    }
+
+    .circle4 {
+        width: 40px;
+        height: 40px;
+        left: 296px;
+        top: 236px;
+    }
+
+    .circle5 {
+        width: 28px;
+        height: 28px;
+        left: 851px;
+        top: 547px;
+        background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.48) 0%, rgba(212, 93, 93, 0.248) 59.67%, rgba(167, 49, 49, 0.264) 78.59%, rgba(130, 25, 25, 0.232) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+        box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+        filter: blur(2.5px);
+        backdrop-filter: blur(2px);
+    }
 }
