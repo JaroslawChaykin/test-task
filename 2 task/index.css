@@ -50,7 +50,7 @@ body {
 
 /*  HEADER  */
 
-.header {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -114,10 +114,13 @@ body {
 /*  CONTENT  */
 
 .content {
+    margin-top: 130px;
+}
+
+.content-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 130px;
 }
 
 .content .present-title {
@@ -339,12 +342,14 @@ body {
 
     .header {
         background: #0E1014;
+    }
+
+    .header-container {
         height: 55px;
         align-items: center;
         justify-content: space-between;
         padding-top: 0;
     }
-
     .header .logo {
         display: none;
     }
@@ -370,10 +375,14 @@ body {
     }
 
     .content {
-        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .content-container {
+        background-image: url("./images/noise.svg");
         padding-top: 40px;
         margin-top: 0;
-        background-image: url("./images/noise.svg");
+        flex-direction: column;
         position: relative;
     }
 
